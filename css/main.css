@@ -1,0 +1,293 @@
+:root {
+  --main-color: #f0cf15;
+  --section-color: #f1f1f1;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Roboto", sans-serif;
+}
+/* Start Navbar */
+.navbar {
+  background-color: var(--main-color);
+}
+.nav-link {
+  color: white;
+  font-weight: bold;
+  margin-left: 15px;
+  transition: 0.5s ease;
+}
+
+.navbar-nav .nav-link.active,
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link:focus {
+  color: black;
+}
+
+.dropdown-menu {
+  background-color: #f0cf15;
+}
+
+.dropdown-menu li a:hover {
+  background-color: #f0cf15;
+}
+
+.dropdown-menu a {
+  color: white;
+}
+
+.search-box {
+  border-bottom: 1px solid white;
+}
+.search-box input {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  background-color: #f0cf15;
+  width: 180px;
+  transition: width 0.5s;
+  font-size: 14px;
+  display: block;
+}
+.search-box input::placeholder {
+  color: white;
+}
+
+.search-box input:focus {
+  width: 100%;
+  outline: #f0cf15;
+}
+
+/* End Navbar */
+/* Start Landing */
+.landing {
+  background-color: var(--section-color);
+  height: calc(100vh - 72px);
+}
+@media (max-width: 767px) {
+  .landing img {
+    max-width: 100%;
+  }
+  h2 span {
+    display: block;
+  }
+}
+
+.main-btn {
+  background-color: var(--main-color);
+  color: black;
+  width: 150px;
+  height: 38px;
+  transition: 0.3s;
+  letter-spacing: 2px;
+}
+
+.main-btn:focus {
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+.landing h2 {
+  font-size: 30px;
+  font-weight: bold;
+  font-size: 50px;
+  font-weight: bold;
+}
+.landing h2 span {
+  color: var(--main-color);
+  position: relative;
+}
+.landing h2 span::after {
+  content: " ";
+  color: #f0cf15;
+  text-shadow: 1px 1px 1px black;
+  animation: changetext 15s infinite linear;
+}
+
+@keyframes changetext {
+  0% {
+    content: "Shirt";
+  }
+
+  15% {
+    content: "Smart Watch";
+  }
+  40% {
+    content: "Pants";
+  }
+  60% {
+    content: "Hosdies";
+  }
+  80% {
+    content: "Sport Shose";
+  }
+  100% {
+    content: "Shose";
+  }
+}
+
+.scroll-up a {
+  position: absolute;
+  right: 30px;
+  bottom: 30px;
+  width: 40px;
+  height: 40px;
+  background-color: var(--main-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  z-index: 1000;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+/* End Landing */
+
+/* Start Card */
+.cards .card {
+  border-radius: 15px;
+  transition: 0.5s ease;
+}
+.cards .card:hover {
+  transform: translateY(-15px);
+}
+/* End Card */
+
+/* START PRODUCT */
+.product .card {
+  background-color: var(--section-color);
+  position: relative;
+  overflow: hidden;
+}
+/* .product .card::after {
+  content: "";
+  position: absolute;
+  background-color: rgba(240, 207, 21, 0.5);
+  transform: skewy(50deg);
+  width: 30%;
+  height: 30px;
+  top: -30px;
+  right: 0;
+  opacity: 0;
+  transition: 0.5s;
+}
+.product .card:hover::after {
+  opacity: 1;
+  top: 5px;
+} */
+
+.product .overlay {
+  position: absolute;
+  top: 10%;
+  margin-left: 0;
+  width: 70px;
+  transform: translateX(-30px);
+  opacity: 0;
+  transition: 0.5s;
+}
+.product .overlay .btn {
+  margin-bottom: 20px;
+  background-color: var(--main-color);
+  color: white;
+}
+.product .card:hover .overlay {
+  transform: translateX(0);
+  opacity: 1;
+}
+.shoes .banner {
+  background-image: url(/images/b1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.elctronics .headphone {
+  background-image: url(/images/b1.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.elctronics h2 span {
+  position: relative;
+}
+.elctronics h2 span::after {
+  content: " ";
+  color: #f0cf15;
+  text-shadow: 1px 1px 1px black;
+  animation: change 10s infinite linear;
+}
+
+@keyframes change {
+  0% {
+    content: "Labtop";
+  }
+
+  20% {
+    content: "Smart Watch";
+  }
+  60% {
+    content: "Smart Phone";
+  }
+  80% {
+    content: "Head Phone";
+  }
+  100% {
+    content: "Air Pods";
+  }
+}
+
+@media (max-width: 767px) {
+  .elctronics .headphone img,
+  .shoes .banner img {
+    max-width: 100%;
+  }
+}
+/* End PRODUCT */
+/* CONTACT US */
+.contact-us input:focus,
+.contact-us textarea:focus {
+  color: #495057;
+  background-color: #fff;
+  border-color: #80bdff;
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+/* Start Footer */
+.footer .footer-top {
+  padding: 60px 0 30px;
+  background: #1b1b1b;
+  color: #fff;
+}
+.footer .footer-top ul {
+  list-style: none;
+}
+.footer .footer-top ul li {
+  color: #f0cf15;
+  transition: 0.5s;
+}
+.footer .footer-top ul li:hover {
+  padding-left: 15px;
+}
+
+.footer .footer-top .icon a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 0px 8px 10px;
+  border-radius: 50%;
+  height: 45px;
+  width: 45px;
+  transition: 0.5s;
+}
+.footer .footer-top .icon a:hover {
+  background-color: #f0cf15;
+}
+
+/* End Footer */
